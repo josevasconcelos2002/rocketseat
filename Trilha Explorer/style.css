@@ -1,13 +1,116 @@
 * {
-    margin: 0;
-  }
-  
-  body {
-    background-color: #09090A;
-    color: white;
-  
-    display: grid;
-    place-items: center;
-  
-    height: 100vh;
-  }
+  /* Identifica todos os elementos*/
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #09090a;
+  color: white;
+
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /*um em cada ponta*/
+  padding: 48px;
+}
+
+button {
+  border: 1px solid #8b5cf6;
+  color: #ffffff;
+  border-radius: 8px;
+  background-color: transparent; /*#09090a*/
+  padding: 16px 24px; /*16px em cima e em baixo e 24 nas laterais */
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+button:hover {
+  border: 1px solid #4e328d;
+  color: #09090a;
+  border-radius: 8px;
+  background-color: #ffffff; /*#09090a*/
+  padding: 16px 24px; /*16px em cima e em baixo e 24 nas laterais */
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+#form-habits {
+  display: flex;
+  padding: 0 48px;
+}
+
+.habits {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.day div {
+  margin-bottom: 8px;
+  font-family: "Roboto Mono";
+  font-size: 20px;
+  line-height: 125%;
+  text-align: center;
+  font-weight: 700;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 64px;
+  height: 64px;
+  border: 2px solid #27272a;
+  border-radius: 8px;
+  background-color: #18181b;
+}
+
+/*pseudo-selector*/
+input:checked {
+  background-color: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
+
+input:hover {
+  background-color: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
